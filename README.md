@@ -1,4 +1,4 @@
-﻿# TheBnuyMemeCollection
+# TheBnuyMemeCollection
 
 > A dumb R.E.P.O. mod for me and some friends.
 
