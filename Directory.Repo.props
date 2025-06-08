@@ -1,0 +1,9 @@
+<Project>
+	<PropertyGroup>
+		<GameDirectory>Z:\REPO\</GameDirectory>
+		<RepoModProfileName>AstraModTest</RepoModProfileName>
+		<!-- <BepInExDirectory>$(AppData)\r2modmanPlus-local\REPO\profiles\$(RepoModProfileName)\BepInEx</BepInExDirectory> -->
+		<BepInExDirectory>Z:\r2modmanPlus-local\REPO\profiles\$(RepoModProfileName)\BepInEx</BepInExDirectory>
+		<StartArguments>--doorstop-enable true --doorstop-target "$(BepInExDirectory)\core\BepInEx.Preloader.dll" --gale-profile "$(RepoModProfileName)"</StartArguments>
+	</PropertyGroup>
+</Project>
