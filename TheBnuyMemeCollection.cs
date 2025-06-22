@@ -25,6 +25,8 @@ public class TheBnuyMemeCollection : BaseUnityPlugin
 
         Logger.LogInfo($"{Info.Metadata.GUID} v{Info.Metadata.Version} has loaded!");
         Logger.LogInfo($"{Info.Metadata.GUID} Prepare for bunny memes heheheheheheh");
+
+        gameObject.AddComponent<ShopMusicRunner>();
     }
 
     internal void Patch()
