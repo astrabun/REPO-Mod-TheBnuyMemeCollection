@@ -6,7 +6,7 @@ using UnityEngine;
 
 namespace TheBnuyMemeCollection;
 
-[BepInPlugin("AstraBun.TheBnuyMemeCollection", "TheBnuyMemeCollection", "1.0.1")]
+[BepInPlugin("AstraBun.TheBnuyMemeCollection", "TheBnuyMemeCollection", "1.1.0")]
 public class TheBnuyMemeCollection : BaseUnityPlugin
 {
     internal static TheBnuyMemeCollection Instance { get; private set; } = null!;
@@ -24,7 +24,7 @@ public class TheBnuyMemeCollection : BaseUnityPlugin
         Patch();
 
         Logger.LogInfo($"{Info.Metadata.GUID} v{Info.Metadata.Version} has loaded!");
-        Logger.LogInfo("Prepare for bunny memes heheheheheheh");
+        Logger.LogInfo($"{Info.Metadata.GUID} Prepare for bunny memes heheheheheheh");
     }
 
     internal void Patch()
