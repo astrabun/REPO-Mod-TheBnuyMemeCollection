@@ -6,7 +6,7 @@ using UnityEngine;
 
 namespace TheBnuyMemeCollection;
 
-[BepInPlugin("AstraBun.TheBnuyMemeCollection", "TheBnuyMemeCollection", "1.0.1")]
+[BepInPlugin("AstraBun.TheBnuyMemeCollection", "TheBnuyMemeCollection", "1.1.0")]
 public class TheBnuyMemeCollection : BaseUnityPlugin
 {
     internal static TheBnuyMemeCollection Instance { get; private set; } = null!;
@@ -24,7 +24,9 @@ public class TheBnuyMemeCollection : BaseUnityPlugin
         Patch();
 
         Logger.LogInfo($"{Info.Metadata.GUID} v{Info.Metadata.Version} has loaded!");
-        Logger.LogInfo("Prepare for bunny memes heheheheheheh");
+        Logger.LogInfo($"{Info.Metadata.GUID} Prepare for bunny memes heheheheheheh");
+
+        gameObject.AddComponent<ShopMusicRunner>();
     }
 
     internal void Patch()
@@ -34,6 +36,8 @@ public class TheBnuyMemeCollection : BaseUnityPlugin
         Harmony.PatchAll(typeof(MuseumBoomboxGreenLightPatch));
         Harmony.PatchAll(typeof(EnemyBeamerAttackIntroPatch));
         Harmony.PatchAll(typeof(EnemyHunterHummingLoopPatch));
+        Harmony.PatchAll(typeof(EnemyTrudgeImpactSoundPatch));
+        Harmony.PatchAll(typeof(EnemyHiddenSoundPatch));
     }
 
     internal void Unpatch()
