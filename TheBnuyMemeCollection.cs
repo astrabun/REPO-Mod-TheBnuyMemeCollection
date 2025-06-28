@@ -37,6 +37,7 @@ public class TheBnuyMemeCollection : BaseUnityPlugin
         Harmony.PatchAll(typeof(EnemyBeamerAttackIntroPatch));
         Harmony.PatchAll(typeof(EnemyHunterHummingLoopPatch));
         Harmony.PatchAll(typeof(EnemyTrudgeImpactSoundPatch));
+        Harmony.PatchAll(typeof(EnemyHiddenSoundPatch));
     }
 
     internal void Unpatch()
